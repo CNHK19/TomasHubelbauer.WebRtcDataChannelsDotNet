@@ -36,7 +36,7 @@ namespace Rhaeo.WebRtc.Ice
         .RawName;
 
       // TODO: Remove async/await redundant layer once I am sure this synchronous code is the best way to find the local host unicast IP address.
-      return await Task.FromResult(new LocalHostIceCandidate(0, 0, unicastIpAddress, 51000));
+      return await Task.FromResult(new LocalHostIceCandidate(0, 1, 0, unicastIpAddress, 51000));
     }
 
     private Task<ServerReflexiveIceCandidate> FindServerReflexiveUdpIceCandidate()

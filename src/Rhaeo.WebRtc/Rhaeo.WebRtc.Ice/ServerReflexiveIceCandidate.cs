@@ -1,12 +1,12 @@
 ﻿namespace Rhaeo.WebRtc.Ice
 {
   public sealed class ServerReflexiveIceCandidate
-    : IceCandidate
+    : UdpIceCandidate
   {
     #region Constructors
 
-    public ServerReflexiveIceCandidate(int foundation, int priority, string address, int port)
-      : base(foundation, priority, address, port)
+    public ServerReflexiveIceCandidate(int foundation, int component, int priority, string address, int port)
+      : base(foundation, component, priority, address, port)
     {
     }
 

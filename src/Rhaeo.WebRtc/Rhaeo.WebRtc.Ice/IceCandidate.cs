@@ -6,7 +6,7 @@
   {
     #region Constructors
 
-    protected IceCandidate(int foundation, int priority, string address, int port)
+    protected IceCandidate(int foundation, int component, int priority, string address, int port)
     {
       // TODO: Check against http://tools.ietf.org/html/rfc5245#section-2.4.
       Foundation = foundation;
@@ -26,6 +26,10 @@
     #region Properties
 
     public int Foundation { get; }
+
+    public int Component { get; }
+
+    public abstract IceCandidateTransport Transport { get; }
 
     public int Priority { get; }
 

@@ -15,12 +15,27 @@ namespace Rhaeo.WebRtc.Sdp.Extensions
     /// <returns>A string containing the SDP <c>a=candidate</c> line.</returns>
     public static string ToSdpACandidateLineString(this IIceCandidate iceCandidate)
     {
+      // Candidate transports as per https://tools.ietf.org/html/rfc5245#section-15.1.
+      var transportMap = new Dictionary<IceCandidateTransport, string>()
+      {
+        [IceCandidateTransport.Udp] = "udp",
+        [IceCandidateTransport.Tcp] = null, // TCP is not supported for Data Channel.
+        [IceCandidateTransport.Extension] = null // I don't currently support transport extensions.
+      };
+
+      var transport = transportMap[iceCandidate.Transport];
+      if (transport == null)
+      {
+        throw new ArgumentException("Non-UDP ICE candidate transports are not supported.", nameof(iceCandidate));
+      }
+
+      // Candidate types as per https://tools.ietf.org/html/rfc5245#section-15.1.
       var typeMap = new Dictionary<IceCandidateType, string>()
       {
         [IceCandidateType.LocalHost] = "host",
-        [IceCandidateType.ServerReflexive] = null,
-        [IceCandidateType.Relay] = null,
-        [IceCandidateType.PeerReflexive] = null
+        [IceCandidateType.ServerReflexive] = null, // srflx
+        [IceCandidateType.Relay] = null, // relay
+        [IceCandidateType.PeerReflexive] = null // prflx
       };
 
       var type = typeMap[iceCandidate.Type];
@@ -29,7 +44,7 @@ namespace Rhaeo.WebRtc.Sdp.Extensions
         throw new NotImplementedException($"Converting ICE of type {iceCandidate.Type} is not implemented.");
       }
 
-      return $"a=candidate:{iceCandidate.Foundation} 1 udp {iceCandidate.Priority} {iceCandidate.Address} {iceCandidate.Port} typ {type} generation 0";
+      return $"a=candidate:{iceCandidate.Foundation} {iceCandidate.Component} {iceCandidate.Transport} {iceCandidate.Priority} {iceCandidate.Address} {iceCandidate.Port} typ {type} generation 0";
     }
 
     #endregion
