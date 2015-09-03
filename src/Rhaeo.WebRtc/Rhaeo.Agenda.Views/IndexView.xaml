@@ -1,0 +1,6 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="Rhaeo.Agenda.Views.IndexView">
+  <StackPanel>
+    <TextBlock Text="TODO: Agenda. Some CRUD over SQLite or something so when the connection is ready, the web peer can prompt the root (this app) to execute." />
+    <Button Click="StartAgendaWebButton_Click" Content="Start AgendaWeb client" x:Name="StartAgendaWebButton" />
+  </StackPanel>
+</Page>

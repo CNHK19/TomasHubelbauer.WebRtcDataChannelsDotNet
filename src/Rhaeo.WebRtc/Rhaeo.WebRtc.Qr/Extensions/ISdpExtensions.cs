@@ -15,11 +15,8 @@ namespace Rhaeo.WebRtc.Qr.Extensions
   {
     #region Methods
 
-    public async static Task<Uri> ToQrDataUri(this ISdp sdp)
+    public async static Task<Uri> ToQrDataUri(this ISdp sdp, int width, int height)
     {
-      var height = 500;
-      var width = 500;
-
       var qrCodeWriter = new QRCodeWriter();
       var bitMatrix = qrCodeWriter.encode(sdp.ToString(), ZXing.BarcodeFormat.QR_CODE, width, height);
 
@@ -45,15 +42,10 @@ namespace Rhaeo.WebRtc.Qr.Extensions
           return new Uri($"data:image/png;base64,{Convert.ToBase64String(buffer)}");
         }
       }
-
-      //return $@"{sdp.UserName}|{sdp.Password}|{Convert.ToBase64String(sdp.Fingerprint)}|{string.Join("|", sdp.UdpIceCandidates.Select(udpIceCandidate => $"{udpIceCandidate.Address}:{udpIceCandidate.Port}"))}".Trim();
     }
 
-    public static ImageSource ToQrImageSource(this ISdp sdp)
+    public static ImageSource ToQrImageSource(this ISdp sdp, int width, int height)
     {
-      var height = 500;
-      var width = 500;
-
       var qrCodeWriter = new QRCodeWriter();
       var bitMatrix = qrCodeWriter.encode(sdp.ToString(), ZXing.BarcodeFormat.QR_CODE, width, height);
 

@@ -3,12 +3,14 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>a0336b65-9e82-4448-874d-86f9c4178a58</SharedGUID>
+    <SharedGUID>6e6f2bc3-3d54-4012-9381-4c115a226ea6</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Rhaeo.Agenda</Import_RootNamespace>
+    <Import_RootNamespace>Rhaeo.Agenda.ViewModels</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Agenda.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ErrorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IndexViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OfferViewModel.cs" />
   </ItemGroup>
 </Project>
