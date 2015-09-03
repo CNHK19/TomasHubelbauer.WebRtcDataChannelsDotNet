@@ -1,4 +1,5 @@
 ﻿using Rhaeo.WebRtc.Ice;
+using Rhaeo.WebRtc.Ice.Declarations;
 using System;
 using System.Collections.Generic;
 
@@ -33,7 +34,7 @@ namespace Rhaeo.WebRtc.Sdp.Extensions
       var typeMap = new Dictionary<IceCandidateType, string>()
       {
         [IceCandidateType.LocalHost] = "host",
-        [IceCandidateType.ServerReflexive] = null, // srflx
+        [IceCandidateType.ServerReflexive] = "srflx",
         [IceCandidateType.Relay] = null, // relay
         [IceCandidateType.PeerReflexive] = null // prflx
       };
@@ -44,7 +45,7 @@ namespace Rhaeo.WebRtc.Sdp.Extensions
         throw new NotImplementedException($"Converting ICE of type {iceCandidate.Type} is not implemented.");
       }
 
-      return $"a=candidate:{iceCandidate.Foundation} {iceCandidate.Component} {iceCandidate.Transport} {iceCandidate.Priority} {iceCandidate.Address} {iceCandidate.Port} typ {type} generation 0";
+      return $"a=candidate:{iceCandidate.Foundation} {iceCandidate.Component} {transport} {iceCandidate.Priority} {iceCandidate.Address} {iceCandidate.Port} typ {type} generation 0";
     }
 
     #endregion
