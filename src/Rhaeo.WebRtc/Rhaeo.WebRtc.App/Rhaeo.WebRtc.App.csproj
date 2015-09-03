@@ -119,12 +119,21 @@
       <Project>{eaacb206-b201-4148-b4de-7e5c4318a8a4}</Project>
       <Name>Rhaeo.WebRtc.Ice</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Rhaeo.WebRtc.Qr\Rhaeo.WebRtc.Qr.csproj">
+      <Project>{7d00d8c9-c825-4062-885e-76ef13c7a67d}</Project>
+      <Name>Rhaeo.WebRtc.Qr</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rhaeo.WebRtc.Sdp\Rhaeo.WebRtc.Sdp.csproj">
       <Project>{a00925ce-9f05-49e5-a427-3e6531989852}</Project>
       <Name>Rhaeo.WebRtc.Sdp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Rhaeo.WebRtc\Rhaeo.WebRtc.csproj">
+      <Project>{9979914e-4253-4e14-bff0-7c343c5aac15}</Project>
+      <Name>Rhaeo.WebRtc</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <Import Project="..\Rhaeo.Agenda\Rhaeo.Agenda.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
