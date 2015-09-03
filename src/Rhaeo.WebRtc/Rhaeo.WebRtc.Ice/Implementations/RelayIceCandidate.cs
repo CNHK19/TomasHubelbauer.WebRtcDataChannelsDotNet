@@ -1,4 +1,4 @@
-﻿namespace Rhaeo.WebRtc.Ice
+﻿namespace Rhaeo.WebRtc.Ice.Implementations
 {
   public sealed class RelayIceCandidate
     : UdpIceCandidate

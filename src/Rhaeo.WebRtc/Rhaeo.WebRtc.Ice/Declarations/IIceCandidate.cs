@@ -1,4 +1,4 @@
-﻿namespace Rhaeo.WebRtc.Ice
+﻿namespace Rhaeo.WebRtc.Ice.Declarations
 {
   /// <summary>
   /// Defines a contract for <see cref="IceCandidate"/> implementations.

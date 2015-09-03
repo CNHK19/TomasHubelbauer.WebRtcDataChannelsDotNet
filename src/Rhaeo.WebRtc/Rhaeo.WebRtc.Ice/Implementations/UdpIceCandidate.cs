@@ -1,7 +1,9 @@
-﻿namespace Rhaeo.WebRtc.Ice
+﻿using Rhaeo.WebRtc.Ice.Declarations;
+
+namespace Rhaeo.WebRtc.Ice.Implementations
 {
   public abstract class UdpIceCandidate
-    : IceCandidate
+    : IceCandidate, IUdpIceCandidate
   {
     #region Constructors
 

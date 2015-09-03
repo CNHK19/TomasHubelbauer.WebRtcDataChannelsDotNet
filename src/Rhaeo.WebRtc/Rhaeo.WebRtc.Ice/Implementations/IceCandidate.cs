@@ -1,4 +1,6 @@
-﻿namespace Rhaeo.WebRtc.Ice
+﻿using Rhaeo.WebRtc.Ice.Declarations;
+
+namespace Rhaeo.WebRtc.Ice.Implementations
 {
   // TODO: Document.
   public abstract class IceCandidate

@@ -113,19 +113,28 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ice.cs" />
-    <Compile Include="IceCandidate.cs" />
+    <Compile Include="Declarations\IIceCharString.cs" />
+    <Compile Include="Declarations\IIceServer.cs" />
+    <Compile Include="Declarations\IUdpIceCandidate.cs" />
+    <Compile Include="Implementations\Ice.cs" />
+    <Compile Include="Implementations\IceCandidate.cs" />
     <Compile Include="IceCandidateTransport.cs" />
     <Compile Include="IceCandidateType.cs" />
-    <Compile Include="IIce.cs" />
-    <Compile Include="IIceCandidate.cs" />
-    <Compile Include="LocalHostIceCandidate.cs" />
-    <Compile Include="PeerReflexiveIceCandidate.cs" />
+    <Compile Include="Declarations\IIce.cs" />
+    <Compile Include="Declarations\IIceCandidate.cs" />
+    <Compile Include="Declarations\IStunIceServer.cs" />
+    <Compile Include="Declarations\ITurnIceServer.cs" />
+    <Compile Include="Implementations\IceCharString.cs" />
+    <Compile Include="Implementations\IceServer.cs" />
+    <Compile Include="Implementations\LocalHostIceCandidate.cs" />
+    <Compile Include="Implementations\PeerReflexiveIceCandidate.cs" />
+    <Compile Include="Implementations\StunIceServer.cs" />
+    <Compile Include="Implementations\TurnIceServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomIceCharString.cs" />
-    <Compile Include="RelayIceCandidate.cs" />
-    <Compile Include="ServerReflexiveIceCandidate.cs" />
-    <Compile Include="UdpIceCandidate.cs" />
+    <Compile Include="Implementations\RandomIceCharString.cs" />
+    <Compile Include="Implementations\RelayIceCandidate.cs" />
+    <Compile Include="Implementations\ServerReflexiveIceCandidate.cs" />
+    <Compile Include="Implementations\UdpIceCandidate.cs" />
     <Content Include="Properties\Rhaeo.WebRtc.Ice.rd.xml" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
