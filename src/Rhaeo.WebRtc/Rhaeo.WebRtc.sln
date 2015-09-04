@@ -21,14 +21,16 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Rhaeo.Agenda.Views", "Rhaeo
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Rhaeo.Agenda.ViewModels", "Rhaeo.Agenda.ViewModels\Rhaeo.Agenda.ViewModels.shproj", "{6E6F2BC3-3D54-4012-9381-4C115A226EA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhaeo.WebRtc.Stun", "Rhaeo.WebRtc.Stun\Rhaeo.WebRtc.Stun.csproj", "{157E4894-B1B6-43AB-A32B-698E25415D30}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Rhaeo.Agenda.Views\Rhaeo.Agenda.Views.projitems*{a13a3b17-3cdb-4bf9-aa7c-35c9aa4e34af}*SharedItemsImports = 13
 		Rhaeo.Agenda\Rhaeo.Agenda.projitems*{a0336b65-9e82-4448-874d-86f9c4178a58}*SharedItemsImports = 13
 		Rhaeo.Agenda.ViewModels\Rhaeo.Agenda.ViewModels.projitems*{6e6f2bc3-3d54-4012-9381-4c115a226ea6}*SharedItemsImports = 13
-		Rhaeo.Agenda\Rhaeo.Agenda.projitems*{479ff48b-4d0f-4581-b058-3c8c90312660}*SharedItemsImports = 4
 		Rhaeo.Agenda.ViewModels\Rhaeo.Agenda.ViewModels.projitems*{479ff48b-4d0f-4581-b058-3c8c90312660}*SharedItemsImports = 4
 		Rhaeo.Agenda.Views\Rhaeo.Agenda.Views.projitems*{479ff48b-4d0f-4581-b058-3c8c90312660}*SharedItemsImports = 4
+		Rhaeo.Agenda\Rhaeo.Agenda.projitems*{479ff48b-4d0f-4581-b058-3c8c90312660}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,22 @@ Global
 		{479FF48B-4D0F-4581-B058-3C8C90312660}.Release|x86.ActiveCfg = Release|x86
 		{479FF48B-4D0F-4581-B058-3C8C90312660}.Release|x86.Build.0 = Release|x86
 		{479FF48B-4D0F-4581-B058-3C8C90312660}.Release|x86.Deploy.0 = Release|x86
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|ARM.ActiveCfg = Debug|ARM
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|ARM.Build.0 = Debug|ARM
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|x64.ActiveCfg = Debug|x64
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|x64.Build.0 = Debug|x64
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|x86.ActiveCfg = Debug|x86
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Debug|x86.Build.0 = Debug|x86
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|ARM.ActiveCfg = Release|ARM
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|ARM.Build.0 = Release|ARM
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|x64.ActiveCfg = Release|x64
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|x64.Build.0 = Release|x64
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|x86.ActiveCfg = Release|x86
+		{157E4894-B1B6-43AB-A32B-698E25415D30}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
