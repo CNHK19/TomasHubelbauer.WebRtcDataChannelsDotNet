@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAACB206-B201-4148-B4DE-7E5C4318A8A4}</ProjectGuid>
+    <ProjectGuid>{157E4894-B1B6-43AB-A32B-698E25415D30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rhaeo.WebRtc.Ice</RootNamespace>
-    <AssemblyName>Rhaeo.WebRtc.Ice</AssemblyName>
+    <RootNamespace>Rhaeo.WebRtc.Stun</RootNamespace>
+    <AssemblyName>Rhaeo.WebRtc.Stun</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -113,35 +113,18 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Declarations\IIceCharString.cs" />
-    <Compile Include="Declarations\IIceServer.cs" />
-    <Compile Include="Declarations\IUdpIceCandidate.cs" />
-    <Compile Include="Implementations\Ice.cs" />
-    <Compile Include="Implementations\IceCandidate.cs" />
-    <Compile Include="IceCandidateTransport.cs" />
-    <Compile Include="IceCandidateType.cs" />
-    <Compile Include="Declarations\IIce.cs" />
-    <Compile Include="Declarations\IIceCandidate.cs" />
-    <Compile Include="Declarations\IStunIceServer.cs" />
-    <Compile Include="Declarations\ITurnIceServer.cs" />
-    <Compile Include="Implementations\IceCharString.cs" />
-    <Compile Include="Implementations\IceServer.cs" />
-    <Compile Include="Implementations\LocalHostIceCandidate.cs" />
-    <Compile Include="Implementations\PeerReflexiveIceCandidate.cs" />
-    <Compile Include="Implementations\StunIceServer.cs" />
-    <Compile Include="Implementations\TurnIceServer.cs" />
+    <Compile Include="Attributes\XorMappedAddressStunMessageAttribute.cs" />
+    <Compile Include="Bits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Implementations\RandomIceCharString.cs" />
-    <Compile Include="Implementations\RelayIceCandidate.cs" />
-    <Compile Include="Implementations\ServerReflexiveIceCandidate.cs" />
-    <Compile Include="Implementations\UdpIceCandidate.cs" />
-    <Content Include="Properties\Rhaeo.WebRtc.Ice.rd.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Rhaeo.WebRtc.Stun\Rhaeo.WebRtc.Stun.csproj">
-      <Project>{157e4894-b1b6-43ab-a32b-698e25415d30}</Project>
-      <Name>Rhaeo.WebRtc.Stun</Name>
-    </ProjectReference>
+    <Compile Include="Stun.cs" />
+    <Compile Include="StunMessage.cs" />
+    <Compile Include="StunMessageAttribute.cs" />
+    <Compile Include="StunMessageAttributeType.cs" />
+    <Compile Include="StunMessageClass.cs" />
+    <Compile Include="StunMessageId.cs" />
+    <Compile Include="StunMessageMethod.cs" />
+    <Compile Include="StunMessageType.cs" />
+    <Content Include="Properties\Rhaeo.WebRtc.Stun.rd.xml" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
