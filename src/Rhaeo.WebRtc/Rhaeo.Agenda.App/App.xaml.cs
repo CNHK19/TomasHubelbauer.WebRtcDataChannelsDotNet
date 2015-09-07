@@ -37,6 +37,8 @@ namespace Rhaeo.Agenda.App
         }
       }
 
+      
+
       Window.Current.Activate();
     }
   }

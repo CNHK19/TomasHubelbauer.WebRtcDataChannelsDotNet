@@ -137,12 +137,6 @@
     <Compile Include="Implementations\UdpIceCandidate.cs" />
     <Content Include="Properties\Rhaeo.WebRtc.Ice.rd.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Rhaeo.WebRtc.Stun\Rhaeo.WebRtc.Stun.csproj">
-      <Project>{157e4894-b1b6-43ab-a32b-698e25415d30}</Project>
-      <Name>Rhaeo.WebRtc.Stun</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
